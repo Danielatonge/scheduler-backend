@@ -6,8 +6,9 @@ generator db {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://scheduler_system_user:BClf4ejI7DYix2jsXUTQaN2kEJcXWBLU@dpg-cfalnrg2i3mjdujbshi0-a.oregon-postgres.render.com/scheduler_system"
+  // url      = "postgres://scheduler_system_user:BClf4ejI7DYix2jsXUTQaN2kEJcXWBLU@dpg-cfalnrg2i3mjdujbshi0-a.oregon-postgres.render.com/scheduler_system"
   // url      = "postgres://postgres:postgres@127.0.0.1:5432/inno_schedule"
+  url      = "postgres://linpostgres:gPL9m134zshzQM@9@lin-16304-5354-pgsql-primary.servers.linodedb.net:5432/inno_schedule"
 }
 
 model User {

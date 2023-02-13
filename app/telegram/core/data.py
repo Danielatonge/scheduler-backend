@@ -1,8 +1,8 @@
 MODULE_NAME = "core"
 
-TOKEN = "625620708:AAFII7HO_Anlcn0pLMUN9Y_HNkTDJ0MLctc"  # - worksilently_bot
+# TOKEN = "625620708:AAFII7HO_Anlcn0pLMUN9Y_HNkTDJ0MLctc"  # - worksilently_bot
 # TOKEN = "6057962313:AAEEDkC3cDA0j3JQBsqr6FlMorSPzXQ7uvs"  # - test_inno_schedule_bot
-# TOKEN = "1360816203:AAGlHpdXrWlv6p7EGEImAgRTqQOoUNMkbC0"  # - inno_schedule_bot
+TOKEN = "1360816203:AAFGwIslhxZJmYIQsjAa2GxX1COhJ21vnG4"  # - inno_schedule_bot
 
 MESSAGE_HI = "Hi there!✋"
 MESSAGE_HELP = "Schedule platform for Innopolis students.\n\n" \

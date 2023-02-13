@@ -8,7 +8,7 @@ from app.data import MAIN_GROUPS, TIMEZONE, \
     SNE_SLOTS, MS_ELECTIVE_SLOTS, SNE_COURSES, \
     B20_ELECTIVE_SLOTS, B19_ELECTIVE_SLOTS, \
     MS_ELECTIVE_NAMES, BS4_ELECTIVE_NAMES, BS3_ELECTIVE_NAMES, \
-    RFL_COURSES, RFL_SLOTS
+    RFL_COURSES, RFL_SLOTS, ORIGINAL_RELEVANT_INNO_SCHEDULE_USERS
 
 router = APIRouter(tags=["Seed"], prefix="")
 
@@ -20,6 +20,13 @@ def seed_group():
             db.group.create({
                 "level_name": key, "specific_group": group
             })
+    return {"message": "successful"}
+
+
+@router.get('/seed_subscribed_users')
+def seed_subscribed_users():
+    db.user.create_many(
+        data=list(map(lambda x: {"id": x}, ORIGINAL_RELEVANT_INNO_SCHEDULE_USERS)))
     return {"message": "successful"}
 
 
@@ -137,7 +144,8 @@ def connect_slot_course_group():
     slots = db.slot.find_many(where={"specific_group": {
         "in": ["RFL-INTER", "RFL-BEGIN-M1", "RFL-BEGIN-M2", "RFL-BEGIN-BACH"]}})
     for slot in slots:
-        course = db.course.find_first(where={"short_name": slot.specific_group})
+        course = db.course.find_first(
+            where={"short_name": slot.specific_group})
 
         if course:
             db.slot.update(data={
