@@ -18,6 +18,7 @@ main_markup.add(TEXT_BUTTON_NOW, TEXT_BUTTON_DAY, TEXT_BUTTON_WEEK)
 commands = [
     telebot.types.BotCommand("start", "starts innoSchedule bot"),
     telebot.types.BotCommand("help", "Overview of bot commands"),
+    telebot.types.BotCommand("profile", "View my profile information"),
     telebot.types.BotCommand("config_schedule", "Configure group settings"),
     telebot.types.BotCommand("add_elective", "Add an elective course"),
     telebot.types.BotCommand(
@@ -26,7 +27,6 @@ commands = [
     telebot.types.BotCommand("link", "Visit the official course schedule"),
     telebot.types.BotCommand(
         "week_number", "Week number by the academic calendar"),
-    telebot.types.BotCommand("profile", "View my profile information"),
     telebot.types.BotCommand(
         "config_optional", "Configure optional courses e.g Russian Lang."),
     telebot.types.BotCommand(
